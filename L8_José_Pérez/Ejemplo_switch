@@ -1,0 +1,39 @@
+
+
+def case1():
+    return "5+8"
+
+def case2():
+    return "26-12"
+
+def case3():
+    return "5*5"
+
+def case4():
+    return exit
+
+def defaul_case():
+    return "Seleccione de 1 al 4"
+
+def swith_case(argument):
+    switcher = {
+        1: case1,
+        2: case2,
+        3: case3,
+        4: case4
+    }
+
+    func = switcher.get(argument, defaul_case)
+    return func()
+
+option = 1
+print(swith_case(option))
+
+option = 2
+print(swith_case(option))
+
+option = 3
+print(swith_case(option))
+
+option = 4
+print(swith_case(option))

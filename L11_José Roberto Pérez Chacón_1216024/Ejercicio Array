@@ -1,0 +1,5 @@
+personas = ["José","Roberto","Roman", "Mariano", "Rodrigo"]
+edades = [20,19,18,21,32]
+
+for x in range(len(personas)):
+    print(f"Soy {personas[x]} y tengo {edades[x]} años")

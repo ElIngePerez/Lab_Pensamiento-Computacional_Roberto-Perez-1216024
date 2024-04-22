@@ -1,0 +1,35 @@
+print("Ejercicio No.1")
+
+nombres = []
+contador = 0
+while (contador < 5):
+            nombre = (input("Ingrese un nombre\n"))
+            nombres.append(nombre)
+            contador += 1
+
+for i, nombre in enumerate(nombres, start=1):
+    print(f"Nombre {i}: {nombre}")
+
+
+print("Ejercicio No.2")
+
+contador = 0
+edades = []
+
+while contador < 5:
+    edad = None
+    while edad is None or edad <= 0 or not edad.is_integer():
+        try:
+            edad = float(input("Ingrese una edad de la persona (debe ser un número entero mayor que 0): "))
+            if edad <= 0 or not edad.is_integer():
+                print("Por favor, ingrese un número entero mayor que 0.")
+                edad = None
+        except ValueError:
+            print("Por favor, ingrese un número válido.")
+            continue
+        
+    edades.append(int(edad))
+    contador += 1
+
+for i, edad in enumerate(edades, start=1):
+    print(f"Edad{i}:{edad}")

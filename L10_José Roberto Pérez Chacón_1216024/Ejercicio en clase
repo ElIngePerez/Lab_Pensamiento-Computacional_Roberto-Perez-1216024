@@ -1,0 +1,4 @@
+palabras = ["HOLA","Hola","ola"]
+palabras.pop(1)
+print(palabras)
+

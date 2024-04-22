@@ -1,0 +1,34 @@
+opcion = int(input("Seleccione una opcion\n Opcion 1) Conocer el numero mas grande.\n Opcion 2) Tabla de multiplicar\n Opcion 3) Salir\n"))
+
+contador = 0
+numeros = []
+numero_mayor = 0
+match opcion:
+    case 1:
+        while (contador < 5):
+            numero = int(input("Ingrese un número entero\n"))
+            contador += 1
+            numeros.append(numero)
+            numero_mayor = max(numeros)
+            print(f"El número mayor es :", numero_mayor)
+
+    case 2:
+        TituloCol = "\t"
+        for col in range(1,11):
+            TituloCol += str(col) + "\t"
+        print(TituloCol)
+        TextoFila = ""
+        for fila in range(1,11):
+            TextoFila += str(fila) + "\t"
+            
+            for col in range(1,11):
+                TextoFila += str(fila*col) + "\t"
+
+            print(TextoFila)
+            TextoFila = ""
+
+    case 3:
+        exit
+        
+
+        

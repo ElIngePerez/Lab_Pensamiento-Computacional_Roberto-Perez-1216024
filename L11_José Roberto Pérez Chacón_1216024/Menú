@@ -1,0 +1,31 @@
+print("Bienvenido al restaurante de Emilio Ovalle")
+entrada = input("¿Quiere comprar algo? (Si/No) \n ")
+
+precio_desayuno = 0
+precio_almuerzo = 0
+precio_cena = 0
+
+while(entrada == "Si"):
+    entrada2 = input("¿Quiere agregar algo más? (Si/No)\n")
+    if(entrada2 == "Si"):
+        compra = int(input("Que desea comprar:\n 1)Desauno\n 2)Almuerzo\n 3)Cena \n"))
+        if(compra == 1):
+         print("Este desayuno consta de una avena con fruta, un café negro mediano y unas tostadas a la francesa. Con un precio de Q.20.00 \n")
+         desayuno = int(input("¿Cuántos desea agregar? \n"))
+         precio_desayuno += desayuno*20
+        elif(compra == 2):
+          print("Este almuerzo consta de una parrillada con lomito de 12onz, 2 papas horneadas con mantequilla, cebollitas guacamol y chirmol. Con un precio de Q.50.00 \n")
+          almuerzo = int(input("¿Cuántos desea agregar? \n"))
+          precio_almuerzo +=  almuerzo*50
+        elif(compra == 3):
+          print("Esta cena consta de huevos, revueltos o estrellados, salsa de tomate y un cafe negro mediano. Con un precio de Q.30.00 \n")
+          cena = int(input("¿Cuántos desea agregar? \n"))
+          precio_cena += cena*30
+        else:
+          print("Seleccione una opción válida.")
+    else:
+       break
+
+precio_final = precio_almuerzo + precio_cena + precio_desayuno
+print("Su total es: Q.",precio_final)
+    

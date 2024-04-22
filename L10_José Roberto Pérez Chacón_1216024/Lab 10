@@ -1,0 +1,138 @@
+print("Semana No. 10: Ejercicio 1")
+mesEntrada = int(input("Ingrese un número del 1-12 \n"))
+mesSalida = ""
+
+match mesEntrada:
+    case 1:
+        mesSalida = "Enero"
+    case 2:
+        mesSalida = "Febrero"
+    case 3:
+        mesSalida = "Marzo"
+    case 4:
+        mesSalida = "Abril"
+    case 5:
+        mesSalida = "Mayo"
+    case 6:
+        mesSalida = "Junio"
+    case 7:
+        mesSalida = "Julio"
+    case 8:
+        mesSalida = "Agosto"
+    case 9:
+        mesSalida = "Septiembre"
+    case 10:
+        mesSalida = "Octubre"
+    case 11:
+        mesSalida = "Noviembre"
+    case 12:
+        mesSalida = "Diciembre"
+    case _:
+        print("Error: El número ingresado no es valido, debe ser un número del 1-12")
+
+print("MES:", mesSalida)
+print(f"MES: {mesSalida}")
+
+
+print("Semana No. 10: Ejercicio 2, Diagrama de flujo")
+a = int(input("Ingrese un número mayor a cero \n"))
+b = int(input("Ingrese un número mayor a cero \n"))
+c = int(input("Ingrese un número mayor a cero \n"))
+
+if(a <= 0 or b <= 0 or c <= 0):
+    print("Error, el número es invalido, coloque un numero mayor a cero")
+
+if(a>b):
+    if(a>c):
+        print("El número A es mayos a B y C")
+    else:
+        if(a == c):
+            print("A es mayor a B y A es igual a C")
+        else:
+            print("A es mayor a B y A es diferente a C")
+else:
+    if(a == b):
+        if(a > c):
+         print("A es mayor a C")
+        else:
+            if(a == c):
+                print("A es igual a C")
+            else:
+                print("A no es igual a C")
+    else:
+        if(b > c):
+            print("B es mayor a C")
+        else:
+            if(b == c ):
+                print("B es igual a C")
+            else:
+                print("B no es igual a C")
+
+print("Semana No. 10: Ejercicio 3, Signos sodiacales")
+dia = int(input("Ingrese el dia en que nacio \n"))
+mes = int(input("Ingrese el mes en que nacio \n"))
+año = int(input("Ingrese el año en que nacio \n"))
+signo = ""
+
+if(mes == 1):
+        if(dia <= 20):
+            signo = "Capricornio"
+        else:
+            signo = "Acuario"
+if(mes == 2):
+        if(dia <= 18):
+            signo = "Acuario"
+        else:
+            signo = "Piscis"
+if(mes == 3):
+        if(dia <= 20):
+            signo = "Piscis"
+        else:
+            signo = "Aries"
+if (mes == 4):
+        if (dia <= 20):
+            signo = "Aries"
+        else:
+            signo = "Tauro"
+if(mes == 5):
+        if(dia <= 21):
+            signo = "Tauro"
+        else:
+            signo = "Géminis"
+if(mes == 6):
+        if(dia <= 21):
+            signo = "Géminis"
+        else:
+            signo = "Cáncer"
+if(mes == 7):
+        if (dia <= 22):
+            signo = "Cáncer"
+        else:
+            signo = "Leo"
+if(mes == 8):
+        if(dia <= 23):
+            signo = "Leo"
+        else:
+            signo = "Virgo"
+if(mes == 9):
+        if(dia <= 23):
+            signo = "Virgo"
+        else:
+            signo = "Libra"
+if(mes == 10):
+        if(dia <= 23):
+            signo = "Libra"
+        else:
+            signo = "Escorpio"
+if(mes == 11):
+        if(dia <= 22):
+            signo = "Escorpio"
+        else:
+            signo = "Sagitario"
+if(mes == 12):
+        if(dia <= 21):
+            signo = "Sagitario"
+        else:
+            signo = "Capricornio"
+
+print("Su signo sodiacal es:  ", signo)

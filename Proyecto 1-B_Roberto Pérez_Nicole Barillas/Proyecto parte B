@@ -1,0 +1,71 @@
+#Bienvenida al local
+print("Bienvenido a Licuados \n")
+
+#Datos personales
+Nombre_Cliente = input("Ingrese su nombre para la factura. \n")
+
+datos1 = int(input("¿Desea NIT?, de lo contrario coloque 0. \n"))
+Nit = "" 
+if(datos1 >0):
+    Nit = str(datos1)
+else:
+    Nit = "CF"
+
+print("Nuestro Licuado estrella es un licuado de fresa con leche deslactosada sin azúcar. Con un valor de Q.20.00, este siendo de tamaño mediano \n")
+
+#Lista para precios.
+precio_base = 20
+precio_preeliminar1 = 0
+precio_preeliminar2 = 0
+precio_preeliminar = 0
+
+#Lista de agregados
+azucar = 0
+leche = 0
+
+#Comienza con los cambios.
+cambio1 = input("¿Desea hacer algun cambio en el licuado? (Si/No) \n")
+while cambio1 == "Si": 
+       print("Se pueden realizar 3 cambios.\n 1) Agregar más azucar.\n 2) Cambiar de leche.\n 3) Agrandar el licuado\n 4) Salir.\n")
+       modificacion1 = int(input("¿Que modificacion quisiera realizar? \n"))
+       if(modificacion1 == 1):
+            azucar = int(input("Puede colocar un máximo de 2 cucharadas, con un precio de Q.0.50 cada una. ¿Cuántas cucharadas desea? \n"))
+            if(azucar == 1):
+                   precio_preeliminar1 = 0.5
+            elif(azucar == 2):
+                  precio_preeliminar1 = 1
+       if(modificacion1 == 2):
+            leche = int(input("A su licuado le puede:\n 1) hacerlo sin leche, solo de agua, este con un descuento de Q.2.00.\n 2) Utilizar leche deslactosada, sin consto adicional.\n 3) Utilizar leche entera, sin costo adicional. \n 4) Utilizar leche de soya con un costo adicional de Q.3.00. ¿Qué cambio quisiera hacer? \n"))
+            if(leche == 1):
+                  precio_preeliminar =  -2
+            elif(leche == 2):
+                  precio_preeliminar = 0
+            elif(leche == 3):
+                  precio_preeliminar = 0
+            elif(leche == 4):
+                  precio_preeliminar = 4
+       if(modificacion1 == 3):
+            agrandado = input("¿Desea agrandar el licuado? \n")
+            if(agrandado == "Si"):
+                  precio_preeliminar2 = (precio_preeliminar + precio_preeliminar1 + precio_base) * 0.05
+            else:
+                  precio_preeliminar2 = 0
+       if(modificacion1 == 4):
+              break
+       else:
+             print("Seleccione una opción válida.")
+
+       cambio1 = input("¿Quiere hacer otro cambio? (Si/No)\n")
+
+
+#Entrega de factura
+precio_total = precio_base + precio_preeliminar + precio_preeliminar1 + precio_preeliminar2
+
+print("Resumen de su pedido:")
+print("Azúcar:", azucar , "cucharadas")
+print("Tipo de leche:", leche)
+if "agrandado" in locals():
+    print("Agrandado:", agrandado)
+print("Su total es de Q.", precio_total)
+print("A nombre de:", Nombre_Cliente)
+print("NIT:", Nit)
