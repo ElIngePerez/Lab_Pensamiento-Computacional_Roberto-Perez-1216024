@@ -52,7 +52,7 @@ if(n3 <= 0):
 #EJercicio B
 calculoB = 0
 for xB in range(1,n3 + 1):
-    calculoB += 1/pow(xB)
+    calculoB += (1/pow(xB))
 print("El resultado de A es: ", calculoB)
 
 
